@@ -1,0 +1,9 @@
+[Unit]
+Description=Run a simple http service to monitor speedify
+Requires=network-online.target
+
+[Service]
+ExecStart=/bin/bash -c "cd /usr/share/speedifyui/files ; python3 -m http.server"
+
+[Install]
+WantedBy=multi-user.target
